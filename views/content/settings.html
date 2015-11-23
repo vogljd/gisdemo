@@ -1,0 +1,14 @@
+<div ng-repeat="cook in vm.cookies"  ng-init="c = (cook.name  | splitTxt: '.':1)">
+	<span ng-if="cook.name == 'X-Coordinate'">
+		<div>Set Map to load with current coordinates <button onclick="setCoordinatesToCurrent()">Set</button></div>
+	</span>
+	<span ng-if="c == 'X-Coordinate' || c == 'Y-Coordinate' || c == 'Zoom-Level' ">
+		<label><input class="input" type="text" ng-model="cook.val" ng-change="vm.changeUserSettings('text')"> {{  c | dashless }}</label>
+	</span>
+	<span ng-if="c != 'X-Coordinate' && c != 'Y-Coordinate' && c != 'Zoom-Level' ">
+		<label><input type="checkbox" value="{{cook.val}}" ng-model="cook.name" ng-change="vm.changeUserSettings('check')"> Hide {{  c | dashless }}</label>
+	</span>	
+</div>
+<!--<div ng-repeat="st in vm.storage">
+	{{ st.key }} :	{{ st.value }}
+</div>-->

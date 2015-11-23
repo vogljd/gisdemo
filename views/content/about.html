@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About LIL</title>
+</head>
+<body>
+<span ng-repeat="app in vm.gisApps" class="{{ app.id }}">
+	<span ng-if="app.id== 'lil'">
+	<p ng-bind-html="app.description | trust"></p>
+	</span>
+</span>
+</body>
+</html>

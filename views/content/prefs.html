@@ -1,0 +1,7 @@
+<h3>Set your view preferences</h3>
+<div ng-repeat="pref as vm.userPrefs">
+	<span ng-if="prefs == 'X-Coordinate'">
+		<div>Set Map to load with current coordinates <button onclick="setCoordinatesToCurrent()">Set</button></div>
+	</span>
+    <label><input type="checkbox"  ng-model="vm.userPref.(pref)" ng-change="vm:changeUserPrefs(this)"> Hide {{  pref | string.replace : '-': ' '}} </label>
+</div>

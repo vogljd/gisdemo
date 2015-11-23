@@ -1,0 +1,24 @@
+				<div class="row panel-spans" style="display: none;">
+										
+					<span ng-repeat="app in vm.gisApps" class="{{ app.id }}">
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<div class="panel panel-primary">
+								<div class="panel-heading" onclick="window.location='index.html'"><h3 class="panel-title">
+									<a ng-if="app.id != 'wsil'" class="{{ app.id }}">{{ app.name }}</a>
+									<a ng-if="app.id == 'wsil'" class="{{ app.id }}">Wind & Snow Locator (WSIL)</a>
+									</h3>
+								</div>
+								<div class="panel-body" onclick="window.location='index.html'">
+									<h2 ng-if="app.id != 'mil'"><i class="glyphicon glyphicon-{{ app.glyph }}" aria-hidden="true"></i></h2>
+									<h2 ng-if="app.id == 'mil'"><i class="{{ app.glyph }}" aria-hidden="true"></i></h2>
+								</div>
+								<button class="btn btn-primary bot-rt" data-target="#modal{{app.id}}" data-toggle="modal" onclick="javascript:void(0);"  tooltip-placement="left" tooltip="Info"><i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i></button>
+							</div>
+						</div>
+					</span>
+					
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="pan-div">
+						</div>
+					</div>							
+				</div>

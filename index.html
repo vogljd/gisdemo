@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myMap" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myMap" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myMap" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myMap" class="no-js"> <!--<![endif]-->	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+		<title>Land Information Locator (LIL) - Larimer County GIS</title>
+		<meta name="description" content="Land Information Locator (LIL) - Larimer County GIS">
+		<style>
+			#appClass { width: 100%; height: 100%; }
+			.preload {position: fixed;	left: 0px; top: 0px; width: 100%; height: 100%;	z-index: 9999; background: url(img/fill.png); }
+			.preload div { background: url(img/preload3.gif) center no-repeat; width: 100%; height: 100%; }
+		</style>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>$(window).load(function() {	// Animate loader off screen
+			//			$(".preload").fadeOut("slow");
+		});
+		// browser detect
+		function checkIE() {
+			var agentStr = navigator.userAgent;
+			/*			if (agentStr.indexOf('MSIE 7') !=-1) { 
+				document.getElementById('ie7').style.visibility = "visible";
+				} else if (agentStr.indexOf('MSIE 8') != -1) {
+				document.getElementById('ie8').style.visibility = "visible";
+			}; */
+		}
+		var dojoConfig = {
+			parseOnLoad: true,
+            async: true
+		}; 
+		</script>
+		<script src="app/vendor/jquery-ui.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>		
+		<!--[if lt IE 9]>
+			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome-ie7.min.css">
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function() {
+			angular.bootstrap(document);
+			});
+			</script>
+		<![endif]-->
+		<!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.js"></script> -->
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>	
+		<script data-require="angular.js@1.4.5" data-semver="1.4.5" src="//code.angularjs.org/1.4.5/angular-cookies.js"></script>
+		<script data-require="angular.js@1.4.5" data-semver="1.4.5" src="//code.angularjs.org/1.4.5/angular-route.js"></script>
+		<script data-require="angular.js@1.4.5" data-semver="1.4.5" src="//code.angularjs.org/1.4.5/angular-sanitize.js"></script>
+		<script src="//kendo.cdn.telerik.com/2015.3.930/js/kendo.all.min.js"></script>
+		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.4.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+		
+		<script src="//js.arcgis.com/3.14/"></script>
+		<script src="app/map-core.js"></script>
+		<script src="app/vendor/slideToggle.directive.js"></script>
+		<script src="app/app.js"></script>
+		<script src="app/constant.js"></script>
+		<script src="app/map-svc.js"></script>
+		<script src="app/nav-svc.js"></script>
+		<script src="app/map-ctrl.js"></script>
+		<script src="app/vendor/uiSliderConfig.js"></script>	
+		<!--<script src="app/vendor/slider.js"></script>	
+		<script src="//kendo.cdn.telerik.com/2015.2.902/js/kendo.all.min.js"></script>-->
+		
+		<link rel="stylesheet" href="//kendo.cdn.telerik.com/2015.3.930/styles/kendo.common-material.min.css" />
+		<link rel="stylesheet" href="//kendo.cdn.telerik.com/2015.3.930/styles/kendo.material.min.css" />
+		
+		
+		<link rel="stylesheet" href="css/querydata.css"/>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//js.arcgis.com/3.14/esri/css/esri.css" />
+		<link rel="stylesheet" href="//js.arcgis.com/3.13/dijit/themes/claro/claro.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	
+	<body ng-controller="mapController as vm" class="claro" onload="checkIE()">
+		<div class="preload"><div></div></div>	
+		<div id="appClass" class="lil">
+			<div ng-include="'views/map/main-nav.html'"></div>
+			<div id="map"></div>
+			<div ng-include="'views/map/map-nav.html'"></div>		
+			<div ng-include="'views/map/panels.html'"></div>
+			<div ng-include="'views/map/modal.html'"></div>
+			<div ng-include="'views/map/footer.html'"></div>			
+		</body>
+	</html>			

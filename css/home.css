@@ -1,0 +1,86 @@
+body { background: #000; }
+#map_zoom_slider { display: none; }
+#map, .btn-primary   { -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=7)"; filter: alpha(opacity=7);
+-moz-opacity: 0.7; -khtml-opacity: 0.7; opacity: 0.7; }
+.outer { position: absolute; width: 100%; max-height: 100%; top: 20px; left: 0px; text-align: center; overflow-y: auto; }
+.outer .bottom { clear: both; height: 60px; }
+.container { text-align: left; }
+.container .jumbotron { padding-left: 30px; padding-right: 30px; }
+.jumbotron h1, .jumbotron .h1 { font-size: 43px; color: #21529C; font-weight: 700; }
+.jumbotron { padding-top: 5px; padding-bottom: 20px; margin-top: 0px; background-color: #fff;
+background-color: rgba(245, 245, 245, 0.55);  }
+.jumbo-txt { padding-left: 235px; text-align: center; text-shadow: 1px 1px 1px #fff; color: #007B7B; }
+.panel-title, .panel-footer { font-size: 1em; }
+.panel-title { font-weight: bold; text-align: center; }
+p.lead { margin-bottom: 0px; padding-bottom: 0px; }
+h1a { text-align: center; }
+h2 { font-size: 36px; width: 52px; padding-top: 4px; padding-bottom: 4px; height: 48px; border-radius: 50px; -webkit-border-radius: 50px; -moz-border-radius: 50px; display: inline-block; margin-left: auto; margin-right: auto;margin: 10px 0px; }
+.logos { position: relative; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter: alpha(opacity=100); opacity: 1; float: left; background: none; padding: 20px 0 0; }
+.logos img { height: 85px; }
+.logos img.gis { margin-left: 12px; }
+
+/***** PANEL STYLES */
+.panel { -moz-box-shadow:    2px 2px 4px #555;
+  -webkit-box-shadow:  2px 2px 4px #555;
+  box-shadow:         2px 2px 4px #555; }
+.panel-body { padding: 5px 15px; background-color: #000; text-align: center; color: #fff; }
+.panel-body:hover { -webkit-transition: background 500ms;  -moz-transition: background 500ms;  -o-transition: background 500ms;  transition: background 500ms; }
+.modal-footer { padding: 5px 20px 5px; }
+.home .navbar-inverse { background-color: #AD1873; border-color: #AD1873; }
+.lil .panel-body:hover, .lil h2, .lil .modal-footer2, .lil .btn-primary { background: #900; }
+.lex .panel-body:hover, .lex h2, .lex .modal-footer2, .lex .btn-primary { background: #994d00; }
+.ril .panel-body:hover, .ril h2, .ril .modal-footer2, .ril .btn-primary { background: #878800; }
+.fil .panel-body:hover, .fil h2, .fil .modal-footer2, .fil .btn-primary { background: #090; }
+.mil .panel-body:hover, .mil h2, .mil .modal-footer2, .mil .btn-primary { background: #099; }
+.vil .panel-body:hover, .vil h2, .vil .modal-footer2, .vil .btn-primary { background: #004d99; }
+.wsil .panel-body:hover, .wsil h2, .wsil .modal-footer2, .wsil .btn-primary { background: #4d0099; }
+
+.btn-primary:hover { -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter: alpha(opacity=100);
+-moz-opacity: 1; -khtml-opacity: 1; opacity: 1; }
+.panel-title > a:hover { text-decoration: none; }
+.panel-footer { border-top: 0px; padding: 5px 10px; background-color: transparent; }
+.panel-header { padding: 8px 10px; }
+.panel-title  { font-weight: normal; }
+.panel { margin-bottom: 30px; transition: .3s; -webkit-transition: .3s; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; }
+.panel:hover { margin-top: 6px; margin-bottom: 24px; -moz-box-shadow: none; -webkit-box-shadow:  none;
+  box-shadow: none; }
+.bot-rt { position: absolute; z-index: 9; bottom: 30px; right: 15px; }
+.btn.btn-primary { border: none; }
+.footer { padding-top: 6px; color: #fff;}
+.footer a { color: #fff;}
+.panel-body { background-size: cover; background-position: center center; }
+.lil .panel-body { background-image: url(http://larimer.org/photos/soderberg.jpg); }
+.lex .panel-body { background-image: url(http://larimer.org/photos/GlacierGorge.jpg);  }
+.ril .panel-body { background-image: url(http://larimer.org/photos/estes_dawn.jpg);  }
+.fil .panel-body { background-image: url(http://larimer.org/photos/viestenz_smith_park.jpg);  }
+.mil .panel-body { background-image: url(http://larimer.org/images/emissions2.jpg); }
+.vil .panel-body { background-image: url(http://larimer.org/images/voter-box.jpg);  }
+.wsil .panel-body { background-image: url(http://larimer.org/photos/snowyvista.jpg);  }
+
+.social { font-size: 17px; height: 105px;  }
+.fa { padding-top: 3px; line-height: 1.05em; }
+.pan-div { position: absolute; width: 100px; margin: 0px auto 0 auto; }
+.pan-up { top: 0px; left: 50px; }
+.pan-left { top: 50px; left: 0px; }
+.pan-right { top: 50px; left: 90px; }
+.pan-down { top: 90px; left: 50px; }
+
+/***** MEDIA QUERIES */
+@media (min-height: 550px) and (min-width: 1199px) {
+	h2 { margin: 30px 0px; }
+}
+@media (min-height: 700px) and (min-width: 1199px) {
+	h2 { margin: 50px 0px; }
+}
+@media (min-height: 800px) and (min-width: 1199px) {
+	h2 { margin: 70px 0px; }
+}
+@media (max-width: 1199px) {
+	.jumbotron h1, .jumbotron .h1 { font-size: 34px; }
+}
+@media (max-width: 767px) {
+	.jumbo-txt { padding-left: 0px; clear: both; }
+	.jumbotron h1, .jumbotron .h1 { font-size: 28px; }
+	.logos { padding: 10px 0; }
+	.jumbotron p { font-size: 18px; }
+}

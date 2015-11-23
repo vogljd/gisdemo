@@ -1,0 +1,33 @@
+<script>
+$(".drag").draggable({
+  cursor: "move",
+  containment: "window",
+   handle: ".panel-heading"
+});
+</script>
+<div class="panel panel-primary panel-fixed panel-main panel-small drag" id="markup-panel"  data-slide-toggle="markup" data-slide-toggle-duration="500">
+	<div class="panel-heading"><button type="button" class="close pull-right clickable"  onclick="$( '#markup-panel').fadeOut();" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+	<button popover="Select a tool (area, distance, location) and unit below, then click the map to draw a shape, line or point.
+	" popover-trigger="mouseenter" popover-placement="left" type="button" class="close popover-help pull-right"><span class="glyphicon glyphicon-question-sign"></span></button>
+	Markup</div>
+	<div class="panel-body">
+		<div id="Markup"></div>
+		<div id="info">
+			<div class="shape-label">Shape: </div><div id="sampleSelect"></div>	
+			<div style="clear: both; height: 10px;"></div>
+<!--		<form name="shape">
+				<select name="shapeSelected" data-dojo-type="dijit/form/Select">
+					<option  ng-repeat="ds in vm.drawingShapes">{{ ds }}</option>
+				</select>
+			</form>
+ -->			
+<!--			
+			<div class="btn-sm" >
+				<button ng-repeat="ds in vm.drawingShapes" data-dojo-type="dijit/form/Button">{{ ds }}</button>
+			</div>
+-->
+			<!--		<span ng-repeat="ds in vm.drawingShapes"><button id="{{ ds }}" >{{ ds }}</button></span>-->
+			<p><button class="btn" ng-click="vm.clearGraphics()">Clear Graphics</button></p>
+		</div>
+	</div>
+</div>

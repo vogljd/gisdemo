@@ -1,0 +1,22 @@
+		<!-- Modal -->
+		<span ng-repeat="app in vm.gisApps" class="{{ app.id }}">
+			<div class="modal fade" id="modal{{app.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+							<h4 class="modal-title"><span class="{{ app.glyph }}" aria-hidden="true"></span> About {{ app.name }}</h4>
+						</div>
+						<div class="modal-body">
+							<p ng-bind-html="app.description | trust"></p>
+							<div class="te"></div>
+						</div>
+						<div class="modal-footer">
+						<button class="btn btn-primary" ng-click="window.location='index.html/#/{{app.id}}'">VIEW &nbsp;<span class="glyphicon glyphicon-expand" aria-hidden="true"></span></button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>	
+		</span>

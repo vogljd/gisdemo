@@ -1,0 +1,49 @@
+<div class="panel panel-primary panel-fixed panel-main" id="layer-panel" data-slide-toggle="layer" data-slide-toggle-duration="500">
+	<div class="panel-heading">
+	<button type="button" class="close pull-right clickable" onclick="$('#layer-panel').fadeOut();" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+	<button popover="Layer help text goes here." popover-trigger="mouseenter" popover-placement="left" type="button" class="close popover-help pull-right"><span class="glyphicon glyphicon-question-sign"></span></button>
+	Layer List</div>
+	<div class="panel-body">
+		<div id="layerToggle">
+			<label>Adjust Layer Opacity</label>
+			<!--<div ng-repeat="maplayer in vm.map.maplayers | filter:{id: '!layer0'} | filter:{id: '!Aerial'}">
+				<label><input type="radio" nv-value="1" name="op($index)" ng-model="(vm.map.layerOpacity[$index])" ng-change="vm.layerOpacityChange((maplayer.id), 1)"> On</label> 
+				<label><input type="radio" nv-value="0" name="op($index)" ng-model="(vm.map.layerOpacity[$index])" ng-change="vm.layerOpacityChange((maplayer.id), 0)"> Off </label>
+				{{maplayer.id}} - opacity: {{ vm.layerOpacity[$index] }} - index: {{ $index }}
+			</div>-->
+
+			<div ng-repeat="maplayer in vm.map.maplayers | filter:{id: '!layer0'} | filter:{id: '!Aerial'}">
+				<label>
+				 <input kendo-slider ng-model="vm.map.layerOpacity[$index]" k-tooltip="{ enabled: true }"
+				k-max="100" k-small-step="5" k-large-step="25" k-show-buttons="false" k-label="false" k-slider-selection="false"
+                style="width: 150px; margin-right: 20px;"  ng-change="vm.layerOpacityChange((maplayer.id), vm.map.layerOpacity[$index])"/>
+				{{maplayer.id}}
+				</label>
+			</div>
+			
+			<!--<div id="esri-opacityinfoslider-container">  
+				<div id="title">Adjust Layer Opacity - Dojo</div>  
+				<hr>  
+				<div id="esri-opacityinfoslider"></div>  
+			</div>
+			
+			<div id="kendo-slider" style="height: 100px;"><b>Kendo Slider</b><br>
+			 <input kendo-slider ng-model="vm.opacity1" k-tooltip="{ enabled: false }"
+				k-max="100" k-small-step="5" k-large-step="25"
+                style="width: 350px;"  />
+				 http://docs.telerik.com/kendo-ui/AngularJS/introduction#update-widgets-when-options-change 
+				
+			</div>
+				<p>Opacity: {{ vm.opacity1/100 }}</p>-->
+			<div id="YearFeature">
+				<label>Aerial Imagery (by year)  </label>
+				<!--  -->
+				<nav><ul class="pagination pagination-sm no-margin">
+					<li  ng-repeat="yr in vm.YearFeature"  ng-click="vm.toggleYr.item = (yr.year); vm.changeDynamicLayer((yr.url), 'Aerial')" ng-class="{'active' : vm.toggleYr.item == (yr.year)}" 
+					><a>{{yr.year | limitTo : -2}}</a></li><!-- app.constant('layerDefs') -->
+				</ul></nav>
+				</div>
+			<div id="LayerList"></div>
+		</div>
+	</div>
+</div>

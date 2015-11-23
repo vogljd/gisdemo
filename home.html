@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myMap" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myMap" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myMap" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myMap" class="no-js"> <!--<![endif]-->	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+		<title>Larimer County GIS Applications</title>
+		<meta name="description" content="Larimer County GIS Applications">
+		<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>  
+		<script>
+		// browser detect
+		function checkIE() {
+			var agentStr = navigator.userAgent;
+			/*			if (agentStr.indexOf('MSIE 7') !=-1) { 
+				document.getElementById('ie7').style.visibility = "visible";
+				} else if (agentStr.indexOf('MSIE 8') != -1) {
+				document.getElementById('ie8').style.visibility = "visible";
+			}; */
+		}
+		var dojoConfig = {
+			parseOnLoad: true,
+            async: true
+		}; 
+		/*
+		$(".panel-spans span").hover(function() {
+			$("#foot").removeClass().addClass($(this).attr("class"));
+			alert($(this).attr("class"));
+		}); */
+		</script>
+		<!--[if lt IE 9]>
+			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome-ie7.min.css">
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function() {
+			angular.bootstrap(document);
+			});
+			</script>
+		<![endif]-->
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>		
+		<script data-require="angular.js@1.4.5" data-semver="1.4.5" src="//code.angularjs.org/1.4.5/angular.js"></script>
+		<script data-require="angular.js@1.4.5" data-semver="1.4.5" src="//code.angularjs.org/1.4.5/angular-cookies.js"></script>
+		<script data-require="angular.js@1.4.5" data-semver="1.4.5" src="//code.angularjs.org/1.4.5/angular-route.js"></script>
+		<script data-require="angular.js@1.4.5" data-semver="1.4.5" src="//code.angularjs.org/1.4.5/angular-sanitize.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>		
+		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.4.js"></script>
+		<link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+		<script src="//js.arcgis.com/3.14/"></script>
+		<script src="app/map-core.js"></script>
+		<script src="app/app.js"></script>
+		<script src="app/constant.js"></script>
+		<script src="app/map-svc.js"></script>
+		<script src="app/home-ctrl.js"></script>
+		<script src="app/vendor/slideToggle.directive.js"></script>
+		
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/home.css" />
+	</head>
+	
+	<body ng-controller="homeController as vm" onload="checkIE()" class="intro">
+		<div id="map" class="map"></div>	
+		
+		<div class="outer">
+			<div class="container">
+				<div class="jumbotron">
+					<div class="logos">
+						<a href="http://larimer.org" target="_blank" tooltip-placement="bottom" tooltip="Larimer County"><img src="http://larimer.org/images/logos/logo_color_200px.png" alt="Larimer County"></a><a href="http://larimer.org/gis/" target="_blank"  tooltip-placement="bottom" tooltip="GIS Department"><img src="http://larimer.org/images/logos/larimer-gis.png" class="gis" alt="Larimer County"></a>
+					</div>
+				
+					<div class="jumbo-txt"><h1>Larimer County Enterprise GIS Portal</h1>
+					<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				<div ng-include="'views/home/panel.html'"></div>
+				
+			</div>
+			<div class="bottom"></div>
+		</div>
+		
+		<!-- Site footer -->
+		<span id="foot" class="lil">
+			<nav class="navbar navbar-inverse navbar-fixed-bottom">
+				<div class="container">			
+					<footer class="footer">
+							© Larimer County GIS &nbsp; | &nbsp; 
+							<a href="/contact.cfm" target="_top" title="Phone/Email directory">Contact Us</a> <br>
+					</footer>			
+				</div>
+			</nav>	
+		</span>
+		
+			<div ng-include="'views/home/modal.html'"></div>
+		
+	</body>
+</html>	

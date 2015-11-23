@@ -1,0 +1,19 @@
+<script>
+$(".drag").draggable({
+  cursor: "move",
+  containment: "window",
+   handle: ".panel-heading"
+});
+</script>
+<div class="panel panel-primary panel-fixed panel-main panel-small drag" id="measure-panel" data-slide-toggle="measure" data-slide-toggle-duration="500">
+	<div class="panel-heading">	
+	<button type="button" class="close pull-right clickable" onclick="$( '#measure-panel').fadeOut();" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+	<button popover="Select a shape below, then click on the map and drag to draw. Measurement results appear below. 
+	Select a shape below, then click on the map and drag to draw. Measurement results appear below.
+	" popover-trigger="mouseenter" popover-placement="left" type="button" class="close popover-help pull-right"><span class="glyphicon glyphicon-question-sign"></span></button>
+	Measure</div>
+	
+	<div class="panel-body">
+		<div id="Measurement"></div>
+	</div>
+</div>

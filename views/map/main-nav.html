@@ -1,0 +1,64 @@
+<script>
+$(".app-menu a").click(function() {
+	$("#appClass").removeClass().addClass($(this).attr("class"));
+  });	
+</script>
+<div class="navbar navbar-inverse">
+<div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+<a class="navbar-brand"><span class="glyphicon glyphicon-pushpin brand-circle" aria-hidden="true"></span>  <span class="brand-name">Land Information Locator (</span>LIL<span class="brand-name">)</span></strong></a>
+    </div>
+    <nav style="height: 1px;" aria-expanded="false" id="bs-navbar" class="navbar-collapse collapse">
+	
+      <ul class="nav navbar-nav navbar-right">
+	  <li><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a>
+		  
+	    <ul class="dropdown-menu">
+          <li><a data-target="#modalAbout" data-toggle="modal"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About This App</a></li>
+          <li><a data-target="#modalSettings" data-toggle="modal"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> My Settings</a></li>
+		  <li role="separator" class="divider"></li>
+          <li><a href="http://www.larimer.org/gis/"><span class="glyphicon glyphicon-home" aria-hidden="true" target="_blank"></span> GIS Home</a></li>
+          <li><a href="home.html"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Enterprise GIS Portal</a></li>
+          <li><a data-toggle="modal" data-target="#modalContact"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact GIS</a></li>
+          <li><a data-toggle="modal" data-target="#modalDisclaimer"><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span> Disclaimer</a></li>
+		  <li role="separator" class="divider"></li>
+          <li><a href="http://www.larimer.org/"><span class="glyphicon glyphicon-globe" aria-hidden="true" target="_blank"></span> Larimer County Home</a></li>
+        </ul>
+		  </li>
+	  <li><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="GIS Apps"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> Apps<span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu app-menu">
+			<li ng-repeat="ga in vm.gisApps"><a class="{{ga.id}}"><span class="{{ga.glyph}}" aria-hidden="true"></span> {{ga.name}}</a></li>
+      </ul>		
+		</li>
+	<li><a  data-target="#modalPrint" data-toggle="modal" title="Print"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print</a></li>
+	  <li><a  data-toggle="modal" data-target="#modalHelp"><span class="glyphicon glyphicon-question-sign"></span>  Help</a></li>
+	</ul>
+	</nav>
+</div>
+
+<noscript>
+	<div class="alert alert-danger browser-warning" role="alert">
+		<h4><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+	  <span class="sr-only">Error:</span> JavaScript is disabled in your browser and is required for this app.<br><br>
+		<a href="https://www.google.com/search?q=enabling+javascript">Click here for instructions on how to enable JavaScript.</a></h4>
+	</div>
+</noscript>
+	<div class="alert alert-danger browser-warning" id="ie7" style="visibility: hidden;">
+		<h4><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		<span class="sr-only">Error:</span> Your Internet Explorer 7 browser, released in 2006 and now used by less than 1% of web surfers globally,  is no longer supported and will not allow you to view this map.<br><br>
+        Please take a moment to <a href="http://browsehappy.com/" target="_blank">upgrade to a
+        more modern browser</a>. It's free, quick and easy.<br>Or use one you may already have installed, such as Chrome or Firefox.</h4>
+	</div>
+	<div class="alert alert-danger browser-warning" id="ie8" role="alert" style="visibility: hidden;">
+		<h4><button type="button" class="close pull-right clickable" data-effect="fadeOut" aria-label="Close" onclick="	document.getElementById('ie8').style.display = 'none'"><span aria-hidden="true">&times;</span></button>
+		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		<span class="sr-only">Error:</span> Your browser, Internet Explorer 8 -- released in 2009 and no longer supported -- does not allow all features of this map to work.<br><br>
+        Please take a moment to <a href="http://browsehappy.com/" target="_blank">upgrade to a
+        more modern browser</a>. It's free, quick and easy.<br>Or use one you may already have installed, such as Chrome or Firefox.</h4>
+	</div>	

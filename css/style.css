@@ -1,0 +1,223 @@
+/*****  SECTIONS: 
+MAP NAV, MAIN NAV, WIDGETS, FOOTER, BRAND COLOR SCHEMES, RESPONSIVE
+lc blue #21529C pink #AD1873 green #007B7B
+*/
+html,body,#map { height: 100%; width: 100%; margin: 0; padding: 0; overflow: hidden; }
+
+
+/***** MAIN NAV */
+.browser-warning { margin: 50px 0 0 80px; position: absolute; z-index: 9999; }
+.brand-circle { background: #000; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px; font-size:  14px; margin-right: 3px; }
+#topNav {  display: block; position: absolute; z-index: 99; height: 30px; width: 100%; }
+.topNavTxt { padding: 5px 10px; color: #fff; display: block; position: absolute; z-index: 99; } 
+#topNav .btn-toolbar { margin-right: 0px; }
+.dropdown-menu>li>a  { padding-left: 10px; }
+.nav-desc { display: inline-block; padding-left: 3px; }
+.navbar { margin-bottom: 0px; border-radius: 0px;  min-height: 35px; position: absolute; z-index: 999; width: 100%; }
+.navbar-nav > li > a, .navbar-brand { padding-top:5px !important; padding-bottom:0 !important; height: 35px; color: #eee !important; }
+.navbar-nav > li > a { padding-top:8px !important; }
+.navbar {min-height:35px !important;}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus { background-color: #850000 !important;}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus { color: #fff  !important; }
+.navbar-toggle { padding: 6px 10px; margin: 3px  10px  2px; }
+.brand-name { font-weight: bold; text-shadow: 0px 1px 1px #333; }
+.dropdown-menu .divider { margin: 5px 0px; }
+.navbar { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; }
+
+/***** WIDGETS */
+.panel-main { position: absolute; z-index: 999; top: 50px; right: 55px; width: 420px; display: none; font-size: .85em;}
+.panel-small { width: 270px; }
+.panel-heading, .panel-footer {padding: 8px 15px; }
+#appClass .panel-heading { font-size: 1.2em; font-weight: bold; }
+.toolbar-top { right: 0px; position: absolute; z-index: 100; } 
+.toolbar-main { top: 50px; right: 10px; position: absolute; z-index: 50; } 
+
+#basemapGal { position:absolute; right:20px; top:10px; z-Index:999; border: 1px solid red; }
+#basemapGalInfo { width:380px; height:280px; overflow:auto; }
+.esriControlsBR2 { display: none; }
+.esriOverviewMap.ovwBL2 { left: 0px; bottom: 100px; }
+.modal-body, .panel-body { max-height:500px; overflow:auto; }
+.modal-header { padding: 8px 15px; color: #fff; }
+
+#LayerList .esriLayerList .esriLabel {  padding: 5px 20px 5px 32px !important; }
+#LayerList label { font-weight: normal !important; }
+#LayerList .esriLayerList .esriTitle { font-size: 13px !important; line-height: 16px !important; }
+.pagination.no-margin { margin: 0px; }
+.pagination-sm > li > a, .pagination-sm > li > span { padding: 5px 7px; }
+.ui-resizable-s { bottom: 0;}
+.ui-resizable-e { right: 0; }
+
+.claro .dijitButton .dijitButtonNode, .claro .dijitDropDownButton .dijitButtonNode, .claro .dijitComboButton .dijitButtonNode, .claro .dijitToggleButton .dijitButtonNode, .esriPrintout, .modal button.btn.btn-primary2 {
+	color: #FFF; border: none; background-color: #900; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; background-image: none; white-space: nowrap; padding: 6px 12px; font-size: 14px; line-height: 1.42857; border-radius: 4px; -moz-user-select: none; }
+ 
+.btn-sm .dijitButton { font-size: 12px !important; } 
+.claro .dijitButtonText { padding: 0px; }
+ 
+.claro .dijitButton .dijitButtonNode:hover, .claro .dijitDropDownButton .dijitButtonNode:hover, .claro .dijitComboButton .dijitButtonNode:hover, .claro .dijitToggleButton:hover .dijitButtonNode, .esriPrintout:hover, .modal button.btn.btn-primary2:hover { color: #fff; background-color: #850000; }
+.close {  font-size: 21px; font-weight: 700; line-height: 1; color: #000; text-shadow: 0px 1px 0px #FFF; opacity: 0.25; }
+#esri-opacityinfoslider2 {   -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -o-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); }
+.esriLegendServiceLabel { font-size: 1.3em; display: block; padding: 3px 0; margin-bottom: 6px; border-bottom: 1px solid #ccc; }
+.esriLegendServiceLabel:before { content: "Layer: "; }
+.esriBasemapGallerySelectedNode .esriBasemapGalleryThumbnail { float: left; margin: 1px; }
+#divMap { width: 100%; height: 100%; margin: 0px; padding: 0px; }
+#divRenderer2 { position: absolute; width: 100%; height: 100%; z-index: 99; }
+#divGrid-outer { position: absolute; z-index: 9999; left: -9000px; bottom: 0px; width: 98%; padding-left: 1%; padding-right: 1%; min-height: 150px; }
+#divGrid-outer .panel-body { height: 90%; min-height: 130px; padding-bottom: 20px; max-height: 700px; }
+#divGrid { width: 100%; min-height: 110px; height: 90%; }
+#data-panel {  }
+.shape-label { float: left; padding-right: 5px; }
+#sampleSelect { float: left; }
+.dgrid-row-table2 { background: #fff; }
+.dgrid-scroller .divGrid-row-undefined:nth-child(odd) .dgrid-row-table { background-color: #efefef; }
+.panel-info > .panel-heading.ui-draggable-handle:hover { background-color: #BCE8F1; }
+.panel-info > .panel-heading.ui-draggable-handle:active { color: #000; }
+.popover-content{ color: #333; font-weight: normal; font-size: .9em; }
+.popover-help { padding-left: 5px; padding-right: 5px; margin-right: 10px; display: inline-block; }
+.esriBookmarks { border: none; }
+.esriBookmarks input['text'] { height: 18px !important; }
+.k-label { display: none; }
+.k-slider-horizontal { height: 17px; }	
+
+/***** MAP NAV */
+.esriSimpleSliderTL { top: 50px; left: 10px; }
+.esriLargeSliderTL {top: 50px; left: 10px; }
+.arcgisSearch .searchGroup .searchInput:focus { border-color: #66AFE9; outline: 0px none;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(102, 175, 233, 0.6); }
+#search { display: block; position: absolute; z-index: 99; top: 50px; left: 40px; }
+#leftNav {  position: absolute; left: 40px; top: 95px; z-index: 50; }
+#LocateButton { margin: 3px 0; }
+.pan-btn { position: absolute; z-index: 48; }
+.pan-up { top: 39px; left: 48%; }
+.pan-down { bottom: 3px; left: 48%; }
+.pan-left{ top: 48%; left: 3px; }
+.pan-right { top: 48%; right: 3px; }
+	
+#InfoText { display: block; position: absolute; z-index: 9999; bottom: 15px; left: 160px; font-size: .9em;}
+#Popup { position: absolute; z-index: 2; }
+.claro .dijitToolbar, .claro .dijitToolbar .dijitButton .dijitButtonNode, .claro .dijitToolbar .dijitDropDownButton .dijitButtonNode, .claro .dijitToolbar .dijitComboButton .dijitButtonNode, .claro .dijitToolbar .dijitToggleButton .dijitButtonNode, .claro .dijitToolbar .dijitComboBox .dijitButtonNode { background: none; background-color: none; padding: 0px; border: none; }
+
+#zoomin, #deactivate, #zoomprev, #zoomnext { display: block; color: #fff; padding: 2px 0 0; width: 30px; height: 26px; background-color: rgba(51,51,51,0.65); -moz-user-select: none; cursor: pointer; border-radius: 5px; margin-bottom: 3px; }
+.HomeButton .home, .LocateButton .zoomLocateButton { background-color: rgba(51,51,51,0.65); }
+.claro .dijitToolbar .dijitButtonHover .dijitButtonNode,.claro .dijitToolbar .dijitDropDownButtonHover .dijitButtonNode,.claro .dijitToolbar .dijitToggleButtonHover .dijitButtonNode,.claro .dijitToolbar .dijitComboButtonHover .dijitButtonNode, .claro .dijitButtonActive .dijitButtonNode,.claro .dijitDropDownButtonActive .dijitButtonNode,.claro .dijitComboButtonActive .dijitButtonNode,.claro .dijitToggleButtonActive .dijitButtonNode,.claro .dijitToggleButtonChecked .dijitButtonNode { 
+	border: 0px !important; background: none; padding: 0px; }
+#navToolbar .dijitInline { display: block; } 
+#navToolbar .dijitInline#deactivate { display: none; background-color: #000; }
+#navToolbar .dijitInline#deactivate .dijitReset.dijitStretch.dijitButtonContents { display: block !important; }
+
+.map-buttons button.btn.btn, button.btn.pan-btn { background-color: rgba(51,51,51,0.65); color: #fff; border-color: #666; }
+.map-buttons button.btn.btn { padding: 2px; border: none; width: 30px; height: 30px; }
+.map-buttons button.btn:hover, .HomeButton .home:hover, .LocateButton .zoomLocateButton:hover, #zoomin:hover, #deactivate:hover, #zoomprev:hover, #zoomnext:hover, button.btn.pan-btn:hover { background-color: rgba(51,51,51,0.90); }
+.scalebar_bottom-left.esriScalebar { bottom: 115px; left: 10px !important;}
+.tooltip-inner { white-space:nowrap; }
+
+/* FOOTER */
+.logos { display: block; position: absolute; z-index: 98; padding: 10px 40px 10px 10px; bottom: 0px; right: 0px; background: #fff; -webkit-border-top-left-radius: 5px; -moz-border-radius-topleft: 5px; border-top-left-radius: 5px; }
+.logos { -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; filter: alpha(opacity=60); opacity: 0.6; }
+.logos img { height: 60px; }
+.logos img.gis { margin-left: 8px; }
+.logos:hover { -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter: alpha(opacity=100); opacity: 1; 
+  -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s; }
+.logos a { display: inline-block; }
+.social { position: absolute; z-index: 99; padding: 8px 8px 0 8px; height: 80px; bottom: 0px; right: 0px; text-align: right; font-size: 14px; line-height: 110%; background: #666; }
+.social:hover { background: #21529C; }
+.social a { color: #fff; display: block; }
+.social a:hover { color: #AD1873; }
+.panel-footer, .panel-footer a { color: #fff; }
+
+
+/* BRAND COLOR SCHEMES */
+.claro .dijitButton .dijitButtonNode, .claro .dijitDropDownButton .dijitButtonNode, .claro .dijitComboButton .dijitButtonNode, .claro .dijitToggleButton .dijitButtonNode { }
+.lil .navbar-inverse { background-color: #900; border-color: #900; }
+.lil .panel-primary { border-color: #900; }
+.lil .panel-primary > .panel-heading, .lil .panel-footer { background-color: #900; border-color: #900;}
+.lil .modal-header, .lil .btn-primary { background-color: #900; color: #fff; }
+.lil .navbar-nav > li > a { border-left: 1px solid #850000; }
+.lil .navbar-nav > li > a:hover { background-color: #850000 !important; color: #fff  !important; }
+.lil .navbar-inverse .navbar-nav > .open > a, .lil .navbar-inverse .navbar-nav > .open > a:hover, .lil .navbar-inverse .navbar-nav > .open > a:focus { background-color: #850000 !important;}
+.lex .navbar-inverse { background-color: #994d00; border-color: #994d00; }
+.lex .panel-primary { border-color: #994d00; }
+.lex .panel-primary > .panel-heading { background-color: #994d00; border-color: #994d00;}
+.lex .modal-header, .lex .panel-footer { background-color: #994d00; }
+.lex .navbar-nav > li > a { border-left: 1px solid #854300; }
+.lex .navbar-nav > li > a:hover { background-color: #854300 !important; color: #fff  !important; }
+.lex .navbar-inverse .navbar-nav > .open > a, .lex .navbar-inverse .navbar-nav > .open > a:hover, .lex .navbar-inverse .navbar-nav > .open > a:focus { background-color: #854300 !important;}
+.ril .navbar-inverse { background-color: #878800; border-color: #878800; }
+.ril .panel-primary { border-color: #878800; }
+.ril .panel-primary > .panel-heading { background-color: #878800; border-color: #878800;}
+.ril .modal-header, .ril .panel-footer { background-color: #878800; }
+.ril .navbar-nav > li > a { border-left: 1px solid #767600; }
+.ril .navbar-nav > li > a:hover { background-color: #767600 !important; color: #fff  !important; }
+.ril .navbar-inverse .navbar-nav > .open > a, .ril .navbar-inverse .navbar-nav > .open > a:hover, .ril .navbar-inverse .navbar-nav > .open > a:focus { background-color: #767600 !important;}
+.fil .navbar-inverse { background-color: #090; border-color: #090; }
+.fil .panel-primary { border-color: #090; }
+.fil .panel-primary > .panel-heading { background-color: #090; border-color: #090;}
+.fil .modal-header, .fil .panel-footer { background-color: #090; }
+.fil .navbar-nav > li > a { border-left: 1px solid #008500; }
+.fil .navbar-nav > li > a:hover { background-color: #008500 !important; color: #fff  !important; }
+.fil .navbar-inverse .navbar-nav > .open > a, .fil .navbar-inverse .navbar-nav > .open > a:hover, .fil .navbar-inverse .navbar-nav > .open > a:focus { background-color: #008500 !important;}
+.mil .navbar-inverse { background-color: #099; border-color: #099; }
+.mil .panel-primary { border-color: #099; }
+.mil .panel-primary > .panel-heading { background-color: #099; border-color: #099;}
+.mil .modal-header, .mil .panel-footer { background-color: #099; }
+.mil .navbar-nav > li > a { border-left: 1px solid #008585; }
+.mil .navbar-nav > li > a:hover { background-color: #008585 !important; color: #fff  !important; }
+.mil .navbar-inverse .navbar-nav > .open > a, .mil .navbar-inverse .navbar-nav > .open > a:hover, .mil .navbar-inverse .navbar-nav > .open > a:focus { background-color: #008585 !important;}
+.vil .navbar-inverse { background-color: #004d99; border-color: #004d99; }
+.vil .panel-primary { border-color: #004d99; }
+.vil .panel-primary > .panel-heading { background-color: #004d99; border-color: #004d99;}
+.vil .modal-header, .vil .panel-footer { background-color: #004d99; }
+.vil .navbar-nav > li > a { border-left: 1px solid #004385; }
+.vil .navbar-nav > li > a:hover { background-color: #004385 !important; color: #fff  !important; }
+.vil .navbar-inverse .navbar-nav > .open > a, .vil .navbar-inverse .navbar-nav > .open > a:hover, .vil .navbar-inverse .navbar-nav > .open > a:focus { background-color: #004385 !important;}
+.wsil .navbar-inverse { background-color: #4d0099; border-color: #4d0099; }
+.wsil .panel-primary { border-color: #4d0099; }
+.wsil .panel-primary > .panel-heading { background-color: #4d0099; border-color: #4d0099;}
+.wsil .modal-header, .wsil .panel-footer { background-color: #4d0099; }
+.wsil .navbar-nav > li > a { border-left: 1px solid #430085; }
+.wsil .navbar-nav > li > a:hover { background-color: #430085 !important; color: #fff  !important; }
+.wsil .navbar-inverse .navbar-nav > .open > a, .wsil .navbar-inverse .navbar-nav > .open > a:hover, .wsil .navbar-inverse .navbar-nav > .open > a:focus { background-color: #430085 !important;}
+
+
+/* RESPONSIVE */
+@media (min-width: 769px) and (max-width: 1012px) { 
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+	.navbar-nav .open .dropdown-menu > li > a {  color: #eee !important; }
+	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus { 
+		background-color: #730000 !important; color: #fff  !important; }
+}
+
+@media (min-width: 769px) {
+	.dropdown-menu > li > a.lil { background-color: #900; color: #fff; }
+	.dropdown-menu > li > a.lex { background-color: #994d00; color: #fff; }
+	.dropdown-menu > li > a.ril { background-color: #878800; color: #fff; }
+	.dropdown-menu > li > a.fil { background-color: #090; color: #fff; }
+	.dropdown-menu > li > a.mil { background-color: #004d99; color: #fff; }
+	.dropdown-menu > li > a.vil { background-color: #009; color: #fff; }
+	.dropdown-menu > li > a.wsil { background-color: #4d0099; color: #fff; }
+	.dropdown-menu > li > a:hover { background-color: #efefef; color: #333; }
+/*	
+	.dropdown-menu > li > a.lil { background-color: #f0d9d9; }
+	.dropdown-menu > li > a.lex { background-color: #f0e4d9; }
+	.dropdown-menu > li > a.ril { background-color: #ededd9; }
+	.dropdown-menu > li > a.fil { background-color: #d9f0d9; }
+	.dropdown-menu > li > a.mil { background-color: #d9f0f0; }
+	.dropdown-menu > li > a.vil { background-color: #d9e4f0; }
+	.dropdown-menu > li > a.wsil { background-color: #e4d9f0; }
+*/
+}
+
+@media (max-width: 480px) {
+  .panel-main { width: 300px; }
+  .brand-name { display: none; }
+  .arcgisSearch .searchGroup .searchInput { width: 150px; }
+  .arcgisSearch .searchBtn {  padding: 6px 6px; }
+}
+
+/***** PRINT STYLES */
+@media print { 
+	#esri_dijit_OverviewMap_0, .logos, .arcgisSearch .searchGroup, .scalebar_bottom-left.esriScalebar, #leftNav, #InfoText , #map_zoom_slider, .pan-btn, #search { display: none; }
+	.data-panel { background: #fff; }
+}
